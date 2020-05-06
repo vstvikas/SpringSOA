@@ -1,0 +1,9 @@
+<aura:component  implements="force:appHostable" controller="RecentAccountsController">
+    <aura:attribute name="accountRecords" type="Account"/>
+    <aura:attribute name="accountColumns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:datatable data="{!v.accountRecords}"
+        columns="{!v.accountColumns}"
+        keyField="id" 
+        hideCheckboxColumn="true" />
+</aura:component>
